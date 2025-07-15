@@ -1,0 +1,31 @@
+[
+  {
+    "consent_object": {
+      "id": "ContactOption",
+      "type": "SELECT",
+      "title": "How would you like to be contacted?",
+      "description": "Please choose an option",
+      "required": true,
+      "options": [
+        {
+          "id": "phone",
+          "title": "Please call me"
+        },
+        {
+          "id": "email",
+          "title": "Please write me an email"
+        }
+      ]
+    }
+  },
+  {
+    "consent_object": {
+      "id": "PhoneNumber",
+      "type": "INPUT",
+      "title": "Phone number",
+      "description": "Please fill out the phone number",
+      "required": true,
+      "options": []
+    }
+  }
+]

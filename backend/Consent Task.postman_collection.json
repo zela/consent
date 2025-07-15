@@ -1,0 +1,69 @@
+{
+  "info": {
+    "_postman_id": "c3526867-6437-4cf8-83f1-7bd96924e216",
+    "name": "Consent Task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23942006"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"abc\",\n    \"password\": \"testPassword\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/login",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Consent Objects",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "testUser",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/consent_objects",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["consent_objects"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

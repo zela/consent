@@ -1,0 +1,22 @@
+[
+  {
+    "consent_object": {
+      "id": "Email",
+      "type": "INPUT",
+      "title": "Email adress",
+      "description": "Please fill out your email address",
+      "required": false,
+      "options": []
+    }
+  },
+  {
+    "consent_object": {
+      "id": "PhoneNumber",
+      "type": "INPUT",
+      "title": "Phone number",
+      "description": "Please fill out the phone number",
+      "required": true,
+      "options": []
+    }
+  }
+]

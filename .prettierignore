@@ -1,0 +1,4 @@
+# Ignore artifacts:
+.nx
+frontend/dist
+pnpm-lock.yaml
