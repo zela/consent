@@ -11,7 +11,11 @@ export const useAuth = () => {
   const navigate = useNavigate();
   const authContext = useContext(AuthContext);
 
-  const { login } = authContext!;
+  if (!authContext) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+
+  const { login } = authContext;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
