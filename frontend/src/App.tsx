@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LoginForm } from './components/pages/LoginForm';
-import Dashboard from './components/pages/Dashboard';
-import ProtectedRoute from './components/routes/ProtectedRoute';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { LoginForm } from "./components/pages/LoginForm";
+import Consent from "./components/pages/Consent";
+import ProtectedRoute from "./components/routes/ProtectedRoute";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginForm />} />
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Consent />} />
         </Route>
       </Routes>
     </Router>

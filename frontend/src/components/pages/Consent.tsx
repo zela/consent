@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 
-const Dashboard: React.FC = () => {
+const Consent: React.FC = () => {
   const authContext = useContext(AuthContext);
 
   if (!authContext) {
@@ -19,4 +19,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default Consent;
