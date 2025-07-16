@@ -33,7 +33,7 @@ export const useAuth = () => {
 
       const { token } = await response.json();
       login(token);
-      navigate("/dashboard");
+      navigate("/");
     } catch (err) {
       setError(err instanceof Error ? err.message : (err as string));
     } finally {
