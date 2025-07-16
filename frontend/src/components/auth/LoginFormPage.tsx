@@ -15,7 +15,7 @@ export function LoginFormPage() {
     username,
     password,
     error,
-    loading,
+    isLoading,
     setUsername,
     setPassword,
     handleSubmit,
@@ -60,9 +60,9 @@ export function LoginFormPage() {
               <Button
                 type="submit"
                 className="w-full hover:cursor-pointer"
-                disabled={loading}
+                disabled={isLoading}
               >
-                {loading ? "Logging in..." : "Login"}
+                {isLoading ? "Logging in..." : "Login"}
               </Button>
               {error && <p className="text-red-500 text-sm">{error}</p>}
             </div>

@@ -4,7 +4,7 @@ import { AuthContext } from "@/components/auth/AuthContext";
 
 export const useAuth = () => {
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
@@ -19,7 +19,7 @@ export const useAuth = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    setIsLoading(true);
     setError(null);
 
     try {
@@ -41,7 +41,7 @@ export const useAuth = () => {
     } catch (err) {
       setError(err instanceof Error ? err.message : (err as string));
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   };
 
@@ -49,7 +49,7 @@ export const useAuth = () => {
     username,
     password,
     error,
-    loading,
+    isLoading,
     setUsername,
     setPassword,
     handleSubmit,
