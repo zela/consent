@@ -1,21 +1,19 @@
-import React, { useContext } from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
-import { AuthContext } from '@/context/AuthContext';
+import React, { useContext } from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { AuthContext } from "@/context/AuthContext";
 
 const ProtectedRoute: React.FC = () => {
   const authContext = useContext(AuthContext);
 
-  if (!authContext) {
-    return <div>Loading...</div>; 
+  if (!authContext || authContext.isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
+      </div>
+    );
   }
 
-  const { isAuthenticated, isLoading } = authContext;
-
-  if (isLoading) {
-    return <div>Loading...</div>; 
-  }
-
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+  return authContext.isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default ProtectedRoute;
