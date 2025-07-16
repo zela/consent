@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { LoginForm } from "./components/pages/LoginForm";
-import Consent from "./components/pages/Consent";
-import ProtectedRoute from "./components/routes/ProtectedRoute";
+import { LoginFormPage } from "./components/auth/LoginFormPage";
+import ConsentPage from "./components/consent/ConsentPage";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<LoginForm />} />
+        <Route path="/login" element={<LoginFormPage />} />
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<Consent />} />
+          <Route path="/" element={<ConsentPage />} />
         </Route>
       </Routes>
     </Router>
