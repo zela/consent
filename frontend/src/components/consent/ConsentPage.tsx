@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "@/components/auth/AuthContext";
 import { Button } from "@/components/ui/button";
+import { ConsentForm } from "@/components/consent/ConsentForm";
 
 const ConsentPage: React.FC = () => {
   const authContext = useContext(AuthContext);
@@ -16,6 +17,7 @@ const ConsentPage: React.FC = () => {
       <div className="absolute top-4 left-4">
         <Button onClick={logout}>Logout</Button>
       </div>
+      <ConsentForm />
     </div>
   );
 };
