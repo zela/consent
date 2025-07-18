@@ -1,5 +1,19 @@
 # Consent data application
 
+## How to run
+
+From the project root:
+
+```shell
+pnpm dev
+```
+
+This will run both backend (on port 8080) and frontend (on port 5173).
+
+For other commands feel free to explore the `package.json`.
+
+Note that for the test you need running backend. It is implemented as e2e test which runs with a headless browser with no mock.
+
 ## Tech stack in bullet points
 
 - `pnpm` for package management
@@ -23,6 +37,7 @@
 - authentication persistence via SessionStorage (for tab reload)
 - dynamic consent form rendering
 - consent form output to console on submit
+- an example test for the happy path
 
 ## "Nice to have", for perspective
 
