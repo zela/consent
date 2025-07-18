@@ -2,6 +2,15 @@ import { useState, useCallback, useContext } from "react";
 import { ConsentContext } from "./ConsentContext";
 import { AuthContext } from "@/components/auth/AuthContext";
 
+export interface ConsentObject {
+  id: string;
+  title: string;
+  description: string;
+  type: "INPUT" | "SELECT";
+  required: boolean;
+  options: Array<{ id: string; title: string }>;
+}
+
 export const useConsent = () => {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);

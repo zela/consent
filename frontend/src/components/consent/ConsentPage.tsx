@@ -13,9 +13,11 @@ const ConsentPage: React.FC = () => {
   const { logout } = authContext;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="absolute top-4 left-4">
-        <Button onClick={logout}>Logout</Button>
+    <div className="flex flex-col items-center p-4 gap-8">
+      <div className="w-full max-w-sm">
+        <Button variant="neutral" onClick={logout}>
+          Logout
+        </Button>
       </div>
       <ConsentForm />
     </div>
