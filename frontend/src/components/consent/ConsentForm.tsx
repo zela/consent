@@ -33,7 +33,6 @@ export const ConsentForm = () => {
     }));
 
     console.log(payload);
-    alert("Look into browser console for payload, thank you!");
   };
 
   if (isLoading) {
