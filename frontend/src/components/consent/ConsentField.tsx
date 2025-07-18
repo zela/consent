@@ -1,10 +1,7 @@
 import type { ConsentObject } from "./useConsent";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface ConsentFieldProps {
   obj: ConsentObject;

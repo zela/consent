@@ -8,4 +8,6 @@ interface AuthContextType {
   token: string | null;
 }
 
-export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+export const AuthContext = createContext<AuthContextType | undefined>(
+  undefined,
+);

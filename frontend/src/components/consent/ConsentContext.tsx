@@ -11,5 +11,5 @@ export interface ConsentContextType {
 }
 
 export const ConsentContext = createContext<ConsentContextType | undefined>(
-  undefined
+  undefined,
 );

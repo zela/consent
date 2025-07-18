@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { useConsent } from "./useConsent";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent} from "@/components/ui/card";
-import { ConsentField } from "./ConsentField"
+import { Card, CardContent } from "@/components/ui/card";
+import { ConsentField } from "./ConsentField";
 
 type ConsentFormData = {
   [key: string]: string;
@@ -48,7 +48,6 @@ export const ConsentForm = () => {
     <Card className="w-full max-w-sm">
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
-
           {consentObjects.map(({ consent_object: obj }) => (
             <ConsentField
               key={obj.id}

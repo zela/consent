@@ -19,7 +19,7 @@ export const useConsent = () => {
 
   if (!consentContext || !authContext) {
     throw new Error(
-      "useConsent must be used within a ConsentProvider and AuthProvider"
+      "useConsent must be used within a ConsentProvider and AuthProvider",
     );
   }
 

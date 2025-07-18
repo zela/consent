@@ -39,7 +39,7 @@
 - comprehensive testing
 - extensive documentation
 - exhaustive error handling
-... and so on
+  ... and so on
 
 ### Features
 

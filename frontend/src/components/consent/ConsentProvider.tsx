@@ -8,7 +8,9 @@ interface ConsentProviderProps {
 }
 
 export const ConsentProvider = ({ children }: ConsentProviderProps) => {
-  const [consentObjects, setConsentObjects] = useState<ConsentObjectWrapper[]>([]);
+  const [consentObjects, setConsentObjects] = useState<ConsentObjectWrapper[]>(
+    [],
+  );
 
   return (
     <ConsentContext.Provider value={{ consentObjects, setConsentObjects }}>
