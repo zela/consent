@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
+import { authenticate } from "./authenticate";
 
 export const useAuth = () => {
   const [error, setError] = useState<string | null>(null);
@@ -23,19 +24,7 @@ export const useAuth = () => {
     setError(null);
 
     try {
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Wrong username or password");
-      }
-
-      const { token } = await response.json();
+      const { token } = await authenticate({ username, password });
       login(token);
       navigate("/");
     } catch (err) {
