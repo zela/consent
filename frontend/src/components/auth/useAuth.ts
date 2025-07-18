@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "@/components/auth/AuthContext";
+import { AuthContext } from "./AuthContext";
 
 export const useAuth = () => {
   const [error, setError] = useState<string | null>(null);
