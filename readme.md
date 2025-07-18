@@ -21,6 +21,8 @@
 - login form
 - protected route
 - authentication persistence via SessionStorage (for tab reload)
+- dynamic consent form rendering
+- consent form output to console on submit
 
 ## "Nice to have", for perspective
 
@@ -32,19 +34,19 @@
 - CI / CD pipeline
 - bundle analysis
 - form input sanitization and validation
+- consent form persistence (especially for long forms)
 - api schema-based validation (Yup/Zod)
 - comprehensive testing
 - extensive documentation
 - exhaustive error handling
+... and so on
 
 ### Features
 
 - forgotten password retrieval
 - sign-up process
 - OAuth authentication
-
-## todo
-- make sure that all the features are implemented
-- refactor login
-- refactor contexts
-- implement a couple of tests
+- persistence of consent data, on the server and/or on the client
+- possibility to save a draft consent form
+- pagination / lazy loading / virtualization for long forms
+- build-time or run-time style theming
